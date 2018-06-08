@@ -19,7 +19,7 @@ import com.training.domains.Student;
 
 
 
-@Path("/greet")
+@Path("/studService")
 public class RootResource {
 
 	
