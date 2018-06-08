@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Delete Student</title>
+<script type="text/javascript" src="scripts/jquery.js"></script>
+
+<script type="text/javascript">
+$(function(){
+	$.ajax({
+		
+		type:'DELETE',
+		url:'http://localhost:5050/RESTExample/rest/greet/remove?key=101',
+        success:function(data){
+        	
+        	alert(data);
+        }
+	});
+	
+});
+</script>
+</head>
+<body>
+
+</body>
+</html>
