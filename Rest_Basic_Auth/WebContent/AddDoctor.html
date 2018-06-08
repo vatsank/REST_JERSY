@@ -7,15 +7,23 @@
 <body>
 <form action="rest/doc/addDoctor" method="post">
 
-doc Id :<input type="text" name="docId">
+<label for="">Doctor Id</label>
+<input type="text" name="docId" required="required">
 
+<label for="">DoctorName</label>
+<input type="text" name="docName" required="required">
 
-docName  :<input type="text" name="docName">
+<label for="">Specialization</label>
+<select  name="special">
+<option value="ENT">ENT</option>
+<option value="DEN">Dental</option>
+<option value="DER">Dermatalogist</option>
+</select>
+<label for="">Grade</label>
+<input type="radio" name="grade" value="Intern">
+<input type="radio" name="grade" value="Associate">
+<input type="radio" name="grade" value="Senior">
 
-
-Special :<input type="text" name="special">
-
-Grade  :<input type="text" name="grade">
 <input type="submit" value="add">
 </form>
 </body>
