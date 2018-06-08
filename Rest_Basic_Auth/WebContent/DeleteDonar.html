@@ -9,6 +9,23 @@
 
 $(function(){
 	
+	
+	$.ajax({
+		type:'GET',
+		url:"http://localhost:4040/REST_Example/rest/bloodDonars",
+		success:function(data){
+			
+			$(data).each(function(key,val){
+				var row =val.mobileNumber + ','+val.bloodGroup+','+val.donarName;
+			
+				$("div").append("<h1>"+val.mobileNumber + ','+val.bloodGroup+','+val.donarName+"</h1>");
+			});
+		}
+		
+	});
+	
+	
+	
 	$("a").on('click',function(){
 		
 		var number =$(this).data("number");
@@ -38,6 +55,6 @@ $(function(){
 
 <a href="http://localhost:4040/REST_Example/rest/bloodDonars/98504040/" data-number ="98504040" >Delete -98504040</a>
 
-
+<div></div>
 </body>
 </html>
