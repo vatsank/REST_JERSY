@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript" src="scripts/jquery.js"></script>
+
+<script type="text/javascript">
+
+$(function(){
+	
+	$("a").on('click',function(){
+		
+		var number =$(this).data("number");
+
+		var requrl = "http://localhost:4040/REST_Example/rest/bloodDonars/"+number;
+		
+		$.ajax({
+			
+			type:'DELETE',
+			url:requrl,
+	        success:function(data){
+	        	
+	        	alert(data.mobileNumber +'delteted');
+	        }
+		});
+		
+		event.preventDefault();
+	});
+	
+	
+});
+</script>
+</head>
+<body>
+
+<a href="" data-number="98404040">Delete -98404040</a>
+
+<a href="http://localhost:4040/REST_Example/rest/bloodDonars/98504040/" data-number ="98504040" >Delete -98504040</a>
+
+
+</body>
+</html>
