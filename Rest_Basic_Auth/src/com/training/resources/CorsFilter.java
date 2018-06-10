@@ -1,4 +1,4 @@
-package com.training.execeptions;
+package com.training.resources;
 
 import java.io.IOException;
 
@@ -21,23 +21,3 @@ public class CorsFilter implements ContainerResponseFilter {
 		}
 
 }
-//
-//@GET
-//@Produces({MediaType.TEXT_HTML})
-//public InputStream viewHome()
-//{
-//   File f = getFileFromSomewhere();
-//   return new FileInputStream(f);
-//}
-
-
-//@Path('{filename}')
-//@GET
-//public InputStream getIndex(@PathParam("filename") String fileName){
-//File index = new File("webapp/public/" + fileName);
-//try {
-//    return new FileInputStream(index);
-//} catch (FileNotFoundException e) {
-//    String s = "ERROR";
-//    return new ByteArrayInputStream(s.getBytes(StandardCharsets.UTF_8));
-//}  
